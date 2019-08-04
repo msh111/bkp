@@ -5,13 +5,13 @@ dbname=$1
 env=$2
 now="$(date)"
 printf "Current date and time %s\n" "$now"
-save_path=/opt/backups
+save_path=/c/s
 s3=$S3_BUCKET_URL
 archive_dir=/opt/bkp-cache
 dest=$s3/$env/db
 
 if [[ ( -z "$dbname" ) || ( -z "$env" ) ]]; then
-    echo "Must provide database and env, example: db-restore.sh mydb env04" 1>&2
+    echo "Must provide database and env, example: db-restore.sh mydb env04" 
     exit 1
 fi
 

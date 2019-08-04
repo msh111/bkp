@@ -12,10 +12,7 @@ if [[ -z "$env" ]]; then
     exit 1
 fi
 
-exec 1> >(logger -s -t $(basename $0)) 2>&1
-now="$(date)"
-printf "Current date and time %s\n" "$now"
-
+#exec 1> >(logger -s -t $(basename $0)) 2>&1
 
 cd /tmp
 
